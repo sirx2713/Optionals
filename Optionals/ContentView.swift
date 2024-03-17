@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var testOp: String? = nil
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        if testOp != nil {
+            OptionalView()
         }
-        .padding()
+        
+        else if testOp == nil {
+            Image("15")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
     }
 }
 
